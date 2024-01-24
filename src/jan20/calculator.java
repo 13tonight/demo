@@ -28,15 +28,11 @@ public class calculator {
                     num4 = sc.nextDouble();
                 }
                 if (i == 1) {
-                    if(variableSelection<4){
                         System.out.println("1 for addition");
                         System.out.println("2 for subtraction");
                         System.out.println("3 for multiplication");
-                    }else {
                         System.out.println("4 for division");
                     }
-
-                }
                 int option = sc.nextInt();
                 switch (option) {
                     case 1:
