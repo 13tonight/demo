@@ -10,6 +10,7 @@ public class bankApp {
         //int acNumber=sc.nextInt();
         int choice=0;
         do {
+            System.out.println("===========================================================================exiawer ee");
             System.out.println("1.Deposit");
             System.out.println("2.Withdraw");
             System.out.println("3.Check Balance");
@@ -25,7 +26,6 @@ public class bankApp {
                     System.out.println("please enter the amount: ");
                     double amount= sc.nextDouble();
                     banConst.deposit(amount);
-                    System.out.println("Current Balance after deposit" + BankAccount.balance);
                     break;
                 case 2:
                     System.out.println("How much amount you need to withdraw: ");
@@ -33,8 +33,12 @@ public class bankApp {
                     banConst.withDraw(amount);
 
                     break;
+                case 3:
+                    banConst.checkBalance();
+                    break;
+
             }
 
-        }while (choice==4);
+        }while (choice<4);
     }
 }
