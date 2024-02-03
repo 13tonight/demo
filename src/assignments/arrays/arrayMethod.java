@@ -71,7 +71,7 @@ public class arrayMethod {
         return secondSmallest;
     }
 
-    public boolean sortArray(int[] arr){
+    public String sortArray(int[] arr){
         int temp=0;
         for(int i : arr) {
             for (int j = 1; j < arr.length; j++) {
@@ -83,7 +83,14 @@ public class arrayMethod {
             }
             System.out.println(i);
         }
-        return true;
+        return "";
+    }
+    //Reverse an array
+    public String arrayReversed(int[] arr){
+        for(int i = arr.length-1; i >=0; i--){
+            System.out.print(arr[i]+" ");
+        }
+        return "";
     }
 }
 

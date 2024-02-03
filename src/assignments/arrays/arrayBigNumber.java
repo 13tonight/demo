@@ -27,6 +27,8 @@ public class arrayBigNumber {
         System.out.println(arraysMethod.secondSmallest(arr));
         System.out.println("=======================Sort an array=============================");
         System.out.println(arraysMethod.sortArray(arr));
+        System.out.println("=======================Reverse an array=============================");
+        System.out.println(arraysMethod.arrayReversed(arr));
     }
 
 }
