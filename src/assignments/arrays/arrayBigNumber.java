@@ -1,5 +1,6 @@
 package assignments.arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class arrayBigNumber {
@@ -20,6 +21,12 @@ public class arrayBigNumber {
         System.out.println(arraysMethod.sumOfAllArray(arr));
         System.out.println("=======================Average of all number in the array=============================");
         System.out.println(arraysMethod.averageOfArray(arr));
+        System.out.println("=======================Second largest of all number in the array=============================");
+        System.out.println(arraysMethod.secondlarget(arr));
+        System.out.println("=======================Second smallest of all number in the array=============================");
+        System.out.println(arraysMethod.secondSmallest(arr));
+        System.out.println("=======================Sort an array=============================");
+        System.out.println(arraysMethod.sortArray(arr));
     }
 
 }
