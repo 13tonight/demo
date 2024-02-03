@@ -3,10 +3,10 @@ package assignments.arrays;
 public class arrayMethod {
     int bigNumber = 0;
     int minimumNumber = 0;
-    int sum=0;
-    double average=0;
-    int secondlargest=0;
-    int secondSmallest=0;
+    int sum = 0;
+    double average = 0;
+    int secondlargest = 0;
+    int secondSmallest = 0;
     int min=0;
 
     public int bigNumber(int[] arr) {
@@ -41,13 +41,13 @@ public class arrayMethod {
     }
     //Average Length
     public double averageOfArray(int[] arr){
-        int averageSum=sumOfAllArray(arr);
-        average= (double) averageSum /arr.length;
+        int averageSum = sumOfAllArray(arr);
+        average = (double) averageSum /arr.length;
         return average;
     }
     //Second-largest number
     public int secondlarget(int[] arr){
-        int firstBig= bigNumber(arr);
+        int firstBig = bigNumber(arr);
         secondlargest = arr[0];
         for(int i : arr){
             if(i > secondlargest && i != firstBig){
