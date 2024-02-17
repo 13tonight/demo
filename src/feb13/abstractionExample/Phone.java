@@ -1,12 +1,12 @@
 package feb13.abstractionExample;
 
-public abstract class phone {
+public abstract class Phone {
 
     public  abstract void call();
 
 
 }
-abstract class mobile extends phone{
+abstract class mobile extends Phone{
 
     public abstract void cordless();
 }
