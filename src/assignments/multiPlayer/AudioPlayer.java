@@ -2,6 +2,10 @@ package assignments.multiPlayer;
 
 
 public class AudioPlayer extends MediaDevice implements PlayableInterface{
+    String audioPlayerName;
+    String play;
+
+
     @Override
     void name() {
         System.out.println("you are in audio player");
