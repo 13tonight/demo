@@ -24,7 +24,7 @@ public class ProductDEmoo {
         Set<Map.Entry<Product, Integer>> productEntry = productMap.entrySet();
         for(Map.Entry<Product, Integer> prod : productEntry){
             System.out.println(prod.getKey());
-            System.out.println(prod.getValue());
+            System.out.println("Price : " + prod.getValue());
         }
     }
 }
