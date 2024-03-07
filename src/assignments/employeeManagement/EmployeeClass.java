@@ -21,34 +21,50 @@ public class EmployeeClass {
         System.out.println("5.Display all employees sorted by name");
         System.out.println("6.Display all employees sorted by salary");
         System.out.println("7.Exit");
-        int choose = sc.nextInt();
-        switch (choose) {
-            case 1:
-                System.out.println("Enter the employee ID: ");
-                int id = sc.nextInt();
-                System.out.println("Employee name: ");
-                String name = sc.next();
-                System.out.println("Department: ");
-                String department = sc.next();
-                System.out.println("Salary: ");
-                double salary = sc.nextDouble();
-                employeeMethod.addEmployeeDetails(new EmployeeDetails(name, id, department, salary));
-                //count = 0;
-                break;
-            case 2:
-                System.out.println("Enter the employee id which you want to remove: ");
-                int removeId = sc.nextInt();
-                employeeMethod.removeEmployeeById(removeId);
-                break;
-            case 3:
-                System.out.println("================All employee details====================");
-                employeeMethod.allEmployeeDetails();
-                break;
-            case 4:
-                break;
+        int choose;
+        do{
+            choose = sc.nextInt();
+            switch (choose) {
+                case 1:
+                    System.out.println("Enter the employee ID: ");
+                    int id = sc.nextInt();
+                    System.out.println("Employee name: ");
+                    String name = sc.next();
+                    System.out.println("Department: ");
+                    String department = sc.next();
+                    System.out.println("Salary: ");
+                    double salary = sc.nextDouble();
+                    employeeMethod.addEmployeeDetails(new EmployeeDetails(name, id, department, salary));
+                    //count = 0;
+                    break;
+                case 2:
+                    System.out.println("Enter the employee id which you want to remove: ");
+                    int removeId = sc.nextInt();
+                    employeeMethod.removeEmployeeById(removeId);
+                    break;
+                case 3:
+                    System.out.println("================All employee details====================");
+                    employeeMethod.allEmployeeDetails();
 
-        }
+                    break;
+                case 4:
+                    System.out.println("Enter the ID: ");
+                    int empId = sc.nextInt();
+                    System.out.println("Enter the salary Amount: ");
+                    double empSalary = sc.nextDouble();
+                    employeeMethod.updateEmployeeSalary(empId, empSalary);
 
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    System.out.println("============================Thanks for using================================");
+                    break;
+
+            }
+        }while(choose < 7);
 
 
         System.out.println(employeeMethod.employees);

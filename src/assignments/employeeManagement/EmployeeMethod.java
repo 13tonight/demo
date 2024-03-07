@@ -23,11 +23,16 @@ public class EmployeeMethod {
     public void allEmployeeDetails(){
         Set<Map.Entry<Integer, EmployeeDetails>> empDetails = employees.entrySet();
         for (Map.Entry<Integer, EmployeeDetails> emp : empDetails){
-            System.out.println("Id: " + emp.getKey() + " Name: "+ emp.getValue().name + " Department: " + emp.getValue().department + " Salary: " + emp.getValue().salary);
+            System.out.println("Id: " + emp.getValue().id + " Name: "+ emp.getValue().name + " Department: " + emp.getValue().department + " Salary: " + emp.getValue().salary);
             //System.out.println(emp.getValue().name);
             //System.out.println(emp.getValue().department);
             //System.out.println(emp.getValue().salary);
         }
+    }
+
+    public void updateEmployeeSalary(int id, double salary){
+        employees.get(id).setSalary(salary);
+
     }
 
 }
