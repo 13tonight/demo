@@ -1,5 +1,10 @@
 package EmployeeManagementSystem;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class EmployeeDetails implements Comparable<EmployeeDetails> {
     String name;
     int id;
@@ -13,38 +18,6 @@ public class EmployeeDetails implements Comparable<EmployeeDetails> {
         this.salary = salary;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
     @Override
     public String toString() {
         return "EmployeeDetails{" +
@@ -54,17 +27,6 @@ public class EmployeeDetails implements Comparable<EmployeeDetails> {
                 ", salary=" + salary +
                 '}';
     }
-
-
-//    @Override
-//    public int compare(EmployeeDetails salary, EmployeeDetails o2) {
-//        return Double.compare(salary.getSalary(), o2.getSalary());
-//    }
-//    @Override
-//    public int compare(EmployeeDetails name1, EmployeeDetails name2) {
-//        return name1.getName().compareTo(name2.getName());
-//    }
-//
     @Override
     public int compareTo(EmployeeDetails empDetail) {
         return this.name.compareTo(empDetail.name);

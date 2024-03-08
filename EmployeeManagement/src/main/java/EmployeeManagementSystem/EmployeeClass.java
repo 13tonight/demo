@@ -36,15 +36,19 @@ public class EmployeeClass {
                         double salary = sc.nextDouble();
                         employeeMethod.addEmployeeDetails(new EmployeeDetails(name, id, department, salary));
                         //count = 0;
+                        System.out.println("Still do you want continue if yes select valid option 1 to 5: else press 6:");
                         break;
+
                     case 2:
                         System.out.println("Enter the employee id which you want to remove: ");
                         int removeId = sc.nextInt();
                         employeeMethod.removeEmployeeById(removeId);
+                        System.out.println("Still do you want continue if yes select valid option 1 to 5: else press 6:");
                         break;
                     case 3:
                         System.out.println("================All employee details====================");
                         employeeMethod.allEmployeeDetails();
+                        System.out.println("Still do you want continue if yes select valid option 1 to 5: else press 6:");
                         break;
                     case 4:
                         System.out.println("Enter the ID: ");
@@ -52,10 +56,12 @@ public class EmployeeClass {
                         System.out.println("Enter the salary Amount: ");
                         double empSalary = sc.nextDouble();
                         employeeMethod.updateEmployeeSalary(empId, empSalary);
+                        System.out.println("Still do you want continue if yes select valid option 1 to 5: else press 6:");
                         break;
                     case 5:
                         System.out.println("+++++++++++++++++++++++++++++++++Sorted by name++++++++++++++++++++++++++++++");
                         employeeMethod.sortByName();
+                        System.out.println("Still do you want continue if yes select valid option 1 to 5: else press 6:");
                         break;
                     case 6:
                         System.out.println("============================Thanks for using================================");
