@@ -21,46 +21,54 @@ public class EmployeeClass {
         System.out.println("5.Display all employees sorted by name");
         System.out.println("6.Exit");
         int choose;
-        do{
-            choose = sc.nextInt();
-            switch (choose) {
-                case 1:
-                    System.out.println("Enter the employee ID: ");
-                    int id = sc.nextInt();
-                    System.out.println("Employee name: ");
-                    String name = sc.next();
-                    System.out.println("Department: ");
-                    String department = sc.next();
-                    System.out.println("Salary: ");
-                    double salary = sc.nextDouble();
-                    employeeMethod.addEmployeeDetails(new EmployeeDetails(name, id, department, salary));
-                    //count = 0;
-                    break;
-                case 2:
-                    System.out.println("Enter the employee id which you want to remove: ");
-                    int removeId = sc.nextInt();
-                    employeeMethod.removeEmployeeById(removeId);
-                    break;
-                case 3:
-                    System.out.println("================All employee details====================");
-                    employeeMethod.allEmployeeDetails();
-                    break;
-                case 4:
-                    System.out.println("Enter the ID: ");
-                    int empId = sc.nextInt();
-                    System.out.println("Enter the salary Amount: ");
-                    double empSalary = sc.nextDouble();
-                    employeeMethod.updateEmployeeSalary(empId, empSalary);
-                    break;
-                case 5:
-                    System.out.println("+++++++++++++++++++++++++++++++++Sorted by name++++++++++++++++++++++++++++++");
-                    employeeMethod.sortByName();
-                    break;
-                case 6:
-                    System.out.println("============================Thanks for using================================");
-                    break;
+        try{
+            do{
+                choose = sc.nextInt();
+                switch (choose) {
+                    case 1:
+                        System.out.println("Enter the employee ID: ");
+                        int id = sc.nextInt();
+                        System.out.println("Employee name: ");
+                        String name = sc.next();
+                        System.out.println("Department: ");
+                        String department = sc.next();
+                        System.out.println("Salary: ");
+                        double salary = sc.nextDouble();
+                        employeeMethod.addEmployeeDetails(new EmployeeDetails(name, id, department, salary));
+                        //count = 0;
+                        break;
+                    case 2:
+                        System.out.println("Enter the employee id which you want to remove: ");
+                        int removeId = sc.nextInt();
+                        employeeMethod.removeEmployeeById(removeId);
+                        break;
+                    case 3:
+                        System.out.println("================All employee details====================");
+                        employeeMethod.allEmployeeDetails();
+                        break;
+                    case 4:
+                        System.out.println("Enter the ID: ");
+                        int empId = sc.nextInt();
+                        System.out.println("Enter the salary Amount: ");
+                        double empSalary = sc.nextDouble();
+                        employeeMethod.updateEmployeeSalary(empId, empSalary);
+                        break;
+                    case 5:
+                        System.out.println("+++++++++++++++++++++++++++++++++Sorted by name++++++++++++++++++++++++++++++");
+                        employeeMethod.sortByName();
+                        break;
+                    case 6:
+                        System.out.println("============================Thanks for using================================");
+                        break;
 
+                }
+            }while(choose < 6);
+            if(choose > 6){
+                System.out.println("you entered "+ choose + " is not a valid option please chose from 1 to 6");
             }
-        }while(choose < 6);
+        }catch (Exception  e){
+            System.out.println("Some thing went wrong you did not choose a correct option");
+        };
+
     }
 }
