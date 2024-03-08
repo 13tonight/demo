@@ -1,6 +1,8 @@
 package assignments.employeeManagement;
 
-public class EmployeeDetails implements Comparable<EmployeeDetails>{
+import java.util.Comparator;
+
+public class EmployeeDetails implements Comparable<EmployeeDetails> {
     String name;
     int id;
     String department;
@@ -55,8 +57,21 @@ public class EmployeeDetails implements Comparable<EmployeeDetails>{
                 '}';
     }
 
+
+//    @Override
+//    public int compare(EmployeeDetails salary, EmployeeDetails o2) {
+//        return Double.compare(salary.getSalary(), o2.getSalary());
+//    }
+//    @Override
+//    public int compare(EmployeeDetails name1, EmployeeDetails name2) {
+//        return name1.getName().compareTo(name2.getName());
+//    }
+//
     @Override
     public int compareTo(EmployeeDetails empDetail) {
         return this.name.compareTo(empDetail.name);
     }
+
+
+
 }

@@ -19,8 +19,7 @@ public class EmployeeClass {
         System.out.println("3.Retrieve employee details");
         System.out.println("4.Update employee salary");
         System.out.println("5.Display all employees sorted by name");
-        System.out.println("6.Display all employees sorted by salary");
-        System.out.println("7.Exit");
+        System.out.println("6.Exit");
         int choose;
         do{
             choose = sc.nextInt();
@@ -58,16 +57,10 @@ public class EmployeeClass {
                     employeeMethod.sortByName();
                     break;
                 case 6:
-                    System.out.println("--------------------------------Sort by Salary--------------------------------");
-                    break;
-                case 7:
                     System.out.println("============================Thanks for using================================");
                     break;
 
             }
-        }while(choose < 7);
-
-
-        System.out.println(employeeMethod.employees);
+        }while(choose < 6);
     }
 }

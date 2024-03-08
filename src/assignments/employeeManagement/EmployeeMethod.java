@@ -38,9 +38,12 @@ public class EmployeeMethod {
         }
     }
 
-    public void sortBySalary(){
-        List<EmployeeDetails>  empSalary = new ArrayList<>(employees.values());
-        Collections.sort(empSalary);
-        System.out.println(empSalary);
-    }
+//    public void sortBySalary(){
+//        List<EmployeeDetails>  empSalary = new ArrayList<>(employees.values());
+//        Collections.sort(empSalary);
+//        for(EmployeeDetails emp : empSalary){
+//            System.out.println(emp);
+//        }
+//
+//    }
 }
