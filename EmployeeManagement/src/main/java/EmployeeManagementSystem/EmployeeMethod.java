@@ -1,4 +1,4 @@
-package assignments.employeeManagement;
+package EmployeeManagementSystem;
 
 import java.util.*;
 
