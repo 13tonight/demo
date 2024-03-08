@@ -1,6 +1,6 @@
 package assignments.employeeManagement;
 
-public class EmployeeDetails {
+public class EmployeeDetails implements Comparable<EmployeeDetails>{
     String name;
     int id;
     String department;
@@ -53,5 +53,10 @@ public class EmployeeDetails {
                 ", department='" + department + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public int compareTo(EmployeeDetails empDetail) {
+        return this.name.compareTo(empDetail.name);
     }
 }

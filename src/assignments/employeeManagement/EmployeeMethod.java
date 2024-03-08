@@ -1,8 +1,6 @@
 package assignments.employeeManagement;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class EmployeeMethod {
 
@@ -24,9 +22,6 @@ public class EmployeeMethod {
         Set<Map.Entry<Integer, EmployeeDetails>> empDetails = employees.entrySet();
         for (Map.Entry<Integer, EmployeeDetails> emp : empDetails){
             System.out.println("Id: " + emp.getValue().id + " Name: "+ emp.getValue().name + " Department: " + emp.getValue().department + " Salary: " + emp.getValue().salary);
-            //System.out.println(emp.getValue().name);
-            //System.out.println(emp.getValue().department);
-            //System.out.println(emp.getValue().salary);
         }
     }
 
@@ -35,4 +30,17 @@ public class EmployeeMethod {
 
     }
 
+    public void sortByName(){
+        List<EmployeeDetails> empDetail = new ArrayList<>(employees.values());
+        Collections.sort(empDetail);
+        for(EmployeeDetails emp : empDetail){
+            System.out.println(emp);
+        }
+    }
+
+    public void sortBySalary(){
+        List<EmployeeDetails>  empSalary = new ArrayList<>(employees.values());
+        Collections.sort(empSalary);
+        System.out.println(empSalary);
+    }
 }

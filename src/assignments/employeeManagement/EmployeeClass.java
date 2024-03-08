@@ -8,7 +8,7 @@ public class EmployeeClass {
         Scanner sc=  new Scanner(System.in);
         employeeMethod.addEmployeeDetails(new EmployeeDetails("haswanth", 101, "java", 89800.15 ));
         employeeMethod.addEmployeeDetails(new EmployeeDetails("rahul", 102, "in-orgonic", 79800.05 ));
-        employeeMethod.addEmployeeDetails(new EmployeeDetails("Dinesh", 103, "orgonic", 85800.35 ));
+        employeeMethod.addEmployeeDetails(new EmployeeDetails("Dinesh", 104, "orgonic", 85800.35 ));
         employeeMethod.addEmployeeDetails(new EmployeeDetails("vamsi", 103, "instrumentaion", 69800.65 ));
 
 
@@ -45,7 +45,6 @@ public class EmployeeClass {
                 case 3:
                     System.out.println("================All employee details====================");
                     employeeMethod.allEmployeeDetails();
-
                     break;
                 case 4:
                     System.out.println("Enter the ID: ");
@@ -53,11 +52,13 @@ public class EmployeeClass {
                     System.out.println("Enter the salary Amount: ");
                     double empSalary = sc.nextDouble();
                     employeeMethod.updateEmployeeSalary(empId, empSalary);
-
                     break;
                 case 5:
+                    System.out.println("+++++++++++++++++++++++++++++++++Sorted by name++++++++++++++++++++++++++++++");
+                    employeeMethod.sortByName();
                     break;
                 case 6:
+                    System.out.println("--------------------------------Sort by Salary--------------------------------");
                     break;
                 case 7:
                     System.out.println("============================Thanks for using================================");
