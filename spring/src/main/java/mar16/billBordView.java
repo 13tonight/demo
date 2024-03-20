@@ -1,8 +1,6 @@
 package mar16;
 
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 import static java.lang.System.out;
 
@@ -25,5 +23,15 @@ public class billBordView {
         out.println(biFunction.apply(floatValue, doubleValue));
     }
 
+    public void supplierExample(Supplier<Double> supplier){
+        out.println(supplier.get());
+    }
 
+    public void consumerExample(Consumer<String> consumer, String value){
+        consumer.accept(value);
+    }
+
+    public void biConsumer(BiConsumer<String, Integer> biConsumer, String value1, int value2){
+        biConsumer.accept(value1,value2);
+    }
 }

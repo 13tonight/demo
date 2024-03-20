@@ -13,5 +13,13 @@ public class billBoardMain {
 
         bordView.biFunctionExample((value,value1) -> (int) (value * value1), 2.0f, 4.5);
 
+        bordView.supplierExample(Math :: random);
+
+        bordView.consumerExample(System.out::println, "sunny");
+
+        bordView.biConsumer((value1, value2) -> {
+            System.out.println(value1 + value2);
+        },"sunny", 678901);
+
     }
 }
