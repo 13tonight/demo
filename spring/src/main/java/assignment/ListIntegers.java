@@ -11,8 +11,7 @@ public class ListIntegers {
         }
 
         Set<Double> finalSet = totalIntegers.stream()
-                .filter(numbers -> numbers % 3 == 0)
-                .mapToDouble(Integer::doubleValue)
+                .filter(numbers -> numbers % 3 == 0).mapToDouble(Integer::intValue)
                 .boxed()
                 .sorted(Comparator.reverseOrder()) // Sort in descending order
                 .collect(Collectors.toCollection(LinkedHashSet::new));
