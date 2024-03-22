@@ -1,6 +1,7 @@
 package mar16;
 
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class billBoardMain {
     public static void main(String[] args) {
@@ -20,6 +21,8 @@ public class billBoardMain {
         bordView.biConsumer((value1, value2) -> {
             System.out.println(value1 + value2);
         },"sunny", 678901);
+
+
 
     }
 }
