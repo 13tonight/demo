@@ -19,4 +19,5 @@ public class employee {
         this.lastName = lastName;
         this.salary = salary;
     }
+
 }
