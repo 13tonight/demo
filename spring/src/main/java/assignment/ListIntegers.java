@@ -12,7 +12,7 @@ public class ListIntegers {
         }
 
         Set<Double> finalSet = totalIntegers.stream()
-                .filter(help :: divide3).mapToDouble(Integer::intValue)
+                .filter(help :: divide3).mapToDouble(Integer:: doubleValue)
                 .boxed()
                 .sorted(Comparator.reverseOrder()) // Sort in descending order
                 .collect(Collectors.toCollection(LinkedHashSet::new));
